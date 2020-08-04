@@ -2,7 +2,10 @@ import React from 'react';
 import './App.scss';
 import { Route, Switch } from 'react-router-dom';
 
-import Module from '../modules/index';
+
+import AppLayout from '../components/Layout';
+import AdminModule from '../modules/Admin';
+
 // import UserModule from '../modules/index';
 
 const Error = () => {
@@ -10,13 +13,13 @@ const Error = () => {
 }
 function App() {
   return (
-      <div className='App'>
-        <Switch>
-          <Route path='/' component={Module} />
-          {/* <Route path='/admin' component={AdminModule} /> */}
-          <Route path="*" component={Error} />
-        </Switch>
-      </div>
+        <AppLayout>
+          <Switch>
+              <Route path="/" component={AdminModule} />
+              {/* <Route path='/admin' component={AdminModule} /> */}
+              <Route path="*" component={Error} />
+          </Switch>
+        </AppLayout>
   );
 }
 
