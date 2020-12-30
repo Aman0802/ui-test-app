@@ -1,0 +1,19 @@
+.altAction {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+  padding: 5px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
